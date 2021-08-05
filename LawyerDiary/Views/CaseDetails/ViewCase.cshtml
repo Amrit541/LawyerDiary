@@ -1,0 +1,30 @@
+﻿@model IEnumerable<LawyerDiary.Models.CaseDetails>
+
+@{
+    ViewData["Title"] = "ViewCase";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        @Html.DisplayFor(modelItem => item.MName)
+                    </h4>
+                    <p class="card-text">
+                        @Html.DisplayFor(modelItem => item.LType)
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+        }
+
+    </div>
+
+</div>
